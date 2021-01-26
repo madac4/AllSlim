@@ -1,0 +1,97 @@
+// MAIN FONT
+$mainfont: 'Lato';
+// MAIN FONT
+// VARIABILE
+$minwidth: 320px;
+$mw: 1110;
+$md1: $mw+12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+$btn_size: 16px;
+$main_size: 18px;
+$dark_color: #282A33;
+$accent_color: #B69C60;
+$grid_gap: 30px;
+// VARIABILE
+// Global Commands
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $mainfont, sans-serif;
+    overflow-x: hidden;
+    min-width: 320px;
+    &.lock {
+        overflow: hidden;
+        @media (max-width: $md3+px) {
+            width: 100%;
+            position: fixed;
+            overflow: hidden;
+        }
+    }
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: $mw+px;
+    margin: 0 auto;
+    width: 100%;
+    @media (max-width: $md1+px) {
+        max-width: 970px;
+    }
+    @media (max-width: $md2+px) {
+        max-width: 750px;
+    }
+    @media (max-width: $md3+px) {
+        max-width: none;
+        padding: 0 10px;
+    }
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+// Global Commands

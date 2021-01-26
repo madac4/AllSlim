@@ -1,0 +1,43 @@
+@import 'mixin';
+@import 'fonts';
+@import 'normalize';
+@import 'media';
+@import 'header';
+@import 'footer';
+.upper-header {
+    max-width: 100%;
+    background-color: #F3F3F3;
+    &__content {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .upper-header__phone {
+            font-weight: bold;
+            font-size: 18px;
+            @include adaptiv_font(19, 14);
+            line-height: 22px;
+            color: $dark_color;
+            margin-right: $grid_gap;
+            @media (max-width: $md3 + px) {
+                margin-right: 15px;
+            }
+        }
+        .upper-header__btn {
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: $dark_color;
+            background-color: #E3E3E3;
+            padding: 18px 36px;
+            margin-right: 10px;
+            transition: background-color .3s;
+            &:hover {
+                background-color: darken($color: #E3E3E3, $amount: 5);
+            }
+            @media (max-width: $md3 + px) {
+                padding: 14px 30px;
+                margin-right: 0;
+            }
+        }
+    }
+}
