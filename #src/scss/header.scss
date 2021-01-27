@@ -3,6 +3,10 @@
     width: 100%;
     padding: 14px 0;
     position: relative;
+    border-bottom: 1px solid #E5E9EE;
+    @media (max-width: $md3+px) {
+        padding: 5px;
+    }
     &__container {
         display: flex;
         align-items: center;
@@ -49,10 +53,22 @@
                 position: relative;
                 border-radius: 50%;
                 transition: background-color .3s;
+                z-index: 2;
                 &__img {
                     cursor: pointer;
                     position: relative;
                     padding: 15px;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        background-color: red;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        opacity: 0;
+                    }
                     .cart__quantity {
                         position: absolute;
                         background-color: $accent_color;
@@ -68,13 +84,14 @@
                 &.active:hover {
                     background-color: #F3F3F3;
                 }
-                &.active:hover .cart-content {
+                &.active .cart-content {
                     opacity: 1;
                     visibility: visible;
                     transform: translateY(0);
                 }
                 &-content {
                     position: absolute;
+                    z-index: 10000;
                     width: 350px;
                     right: 0;
                     background: #FFFFFF;
@@ -146,7 +163,12 @@
                             padding: 5px;
                             transition: background-color .3s;
                             position: relative;
+                            margin-right: 20px;
                             z-index: 2;
+                            svg {
+                                position: relative;
+                                z-index: -1;
+                            }
                             &:hover {
                                 background-color: #F3F3F3;
                             }
@@ -181,7 +203,7 @@
                             margin-bottom: 15px;
                             text-transform: uppercase;
                             &:hover {
-                                background-color: lighten($color: $accent_color, $amount: 5);
+                                background-color: $accent_hover;
                             }
                         }
                         .cart-content__tocart {
@@ -194,7 +216,7 @@
                             transition: color .3s;
                             font-size: $btn_size;
                             &:hover {
-                                color: lighten($color: $accent_color, $amount: 5);
+                                color: $accent_hover;
                             }
                         }
                     }

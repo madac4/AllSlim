@@ -13,6 +13,9 @@ $main_size: 18px;
 $dark_color: #282A33;
 $accent_color: #B69C60;
 $grid_gap: 30px;
+$accent_hover: lighten($color: $accent_color, $amount: 5);
+$dark_hover: lighten($color: $dark_color, $amount: 5);
+$section_size: 45px;
 // VARIABILE
 // Global Commands
 *,
@@ -26,7 +29,7 @@ $grid_gap: 30px;
 body {
     font-family: $mainfont, sans-serif;
     overflow-x: hidden;
-    min-width: 320px;
+    overflow-anchor: none;
     &.lock {
         overflow: hidden;
         @media (max-width: $md3+px) {
