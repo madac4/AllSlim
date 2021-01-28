@@ -1,0 +1,154 @@
+.partner {
+    padding: 60px 0;
+    &-header {
+        text-align: center;
+        .partner-header__title {
+            margin-bottom: 60px;
+        }
+    }
+    &-body {
+        height: calc(1625px - 535px);
+        @media (max-width: $md3+px) {
+            height: 100%;
+        }
+        @media (max-width: $md4+px) {
+            height: 100%;
+        }
+        .partner-body__img {
+            width: 100%;
+            height: 800px;
+            @media (max-width: $md2+px) {
+                height: 600px;
+            }
+            @media (max-width: $md4+px) {
+                height: 300px;
+            }
+        }
+        .partner-body__contact {
+            padding: 60px 50px 117px 50px;
+            background-color: #fff;
+            transform: translateY(-535px);
+            width: 840px;
+            margin: 0 auto;
+            text-align: center;
+            @media (max-width: $md2+px) {
+                padding: 50px 50px 80px 50px;
+                transform: translateY(-350px);
+                width: 85%;
+            }
+            @media (max-width: $md3+px) {
+                padding: 50px $grid_gap;
+                transform: translateY(-300px);
+                width: 85%;
+            }
+            @media (max-width: $md3+px) {
+                transform: translateY(0);
+            }
+            @media (max-width: $md4+px) {
+                width: 100%;
+                padding: 50px 0;
+                background-color: transparent;
+            }
+            .partner-body__minititle {
+                margin-bottom: 25px;
+            }
+            .partner-body__title {
+                font-size: 35px;
+                margin-bottom: 60px;
+                @media (max-width: $md3+px) {
+                    margin-bottom: $grid_gap;
+                }
+            }
+            .partner-body__form {
+                .partner-body__grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 20px $grid_gap;
+                    @media (max-width: $md3+px) {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                    .partner-body__field {
+                        position: relative;
+                        .partner-body__label {
+                            text-align: start;
+                        }
+                        .partner-body__input {
+                            width: 100%;
+                        }
+                    }
+                }
+                .notes {
+                    margin-top: 20px;
+                    .partner-body__label {
+                        text-align: start;
+                    }
+                    .partner-body__textarea {
+                        font-family: 'Lato';
+                        font-size: 16px;
+                        width: 100%;
+                        min-height: 100px;
+                        max-height: 200px;
+                        max-width: 100%;
+                        min-width: 100%;
+                    }
+                }
+                .submit__btn {
+                    font-family: 'Lato';
+                    width: 240px;
+                    margin: 0 auto;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    margin-bottom: 90px;
+    @media (max-width: $md3+px) {
+        margin-bottom: 50px;
+    }
+    &-body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 100px;
+        @media (max-width: $md2+px) {
+            grid-gap: $grid_gap;
+        }
+        @media (max-width: $md3+px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .contact-body__card {
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+            @media (max-width: $md3+px) {
+                margin-bottom: 50px;
+            }
+            .contact-body__img {
+                width: 55px;
+                height: 55px;
+            }
+            .contact-body__title {
+                font-weight: 600;
+                font-size: 24px;
+                margin: 35px 0;
+                line-height: 29px;
+                color: $dark_color;
+                @media (max-width: $md3+px) {
+                    margin: 15px 0;
+                }
+            }
+            .contact-body__text {
+                font-size: 18px;
+                line-height: 30px;
+                color: #6C6D71;
+            }
+        }
+    }
+}
+
+.map {
+    width: 100%;
+    height: 400px;
+}

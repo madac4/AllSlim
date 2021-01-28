@@ -3,10 +3,12 @@ const header = document.querySelector('.header');
 if (header != undefined) {
     const burger = document.querySelector('.burger_menu');
     const navMenu = document.querySelector('.header__nav');
+    const body = document.querySelector('body');
 
     burger.addEventListener('click', () => {
-        burger.classList.toggle('active')
-        navMenu.classList.toggle('active')
+        burger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        body.classList.toggle('lock');
     });
 }
 // Burger Menu
@@ -237,3 +239,22 @@ if (header != undefined) {
     });
 }
 // Cart
+
+const map = document.querySelector('#map');
+
+if (map != undefined) {
+    function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+        });
+    };
+}

@@ -7,6 +7,7 @@
 @import 'success';
 @import 'country';
 @import 'shop';
+@import 'partner';
 // GLOBAL STYLES
 .alertify-notifier {
     top: 20px;
@@ -150,6 +151,8 @@
     border: 1px solid #E5E8EE;
     transition: border .3s;
     padding: 10px;
+    font-family: 'Lato';
+    font-size: 16px;
     outline: none;
     &:focus {
         border: 1px solid $accent_color;

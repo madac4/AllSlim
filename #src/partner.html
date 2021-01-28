@@ -22,46 +22,76 @@
                 <h2 class="partner-header__title section-title">Devino Partener</h2>
             </div>
             <div class="partner-body">
-                <div class="partner-body__img"></div>
+                <div class="partner-body__img" style="background: url('img/partnerImg.jpg') 50% 50% / cover no-repeat;"></div>
                 <div class="partner-body__contact">
                     <span class="partner-body__minititle section-minititle">Contact us</span>
-                    <h3 class="partner-body__title">wanna ask something?</h3>
+                    <h3 class="partner-body__title section-title">wanna ask something?</h3>
 
                     <form action="#" class="partner-body__form" data-simplebar>
                         <div class="partner-body__grid">
                             <div class="partner-body__field">
-                                <label for="name" class="form-label">Nume<span>*</span></label>
-                                <input type="text" id="name" class="partner-body__input form-input">
+                                <label for="name" class="partner-body__label form-label">Nume<span>*</span></label>
+                                <input type="text" id="name" class="partner-body__input form-input" required>
                             </div>
                             <div class="partner-body__field">
-                                <label for="last_name" class="form-label">Prenume<span>*</span></label>
-                                <input type="text" id="last_name" class="partner-body__input form-input">
+                                <label for="last_name" class="partner-body__label form-label">Prenume<span>*</span></label>
+                                <input type="text" id="last_name" class="partner-body__input form-input" required>
                             </div>
                             <div class="partner-body__field">
-                                <label for="E-mail" class="form-label">E-mail<span>*</span></label>
-                                <input type="email" id="E-mail" class="partner-body__input form-input">
+                                <label for="E-mail" class="partner-body__label form-label">E-mail<span>*</span></label>
+                                <input type="email" id="E-mail" class="partner-body__input form-input" required>
                             </div>
                             <div class="partner-body__field">
-                                <label for="phone" class="form-label">Phone<span>*</span></label>
-                                <input type="tel" id="phone" class="partner-body__input form-input">
+                                <label for="phone" class="partner-body__label form-label">Phone<span>*</span></label>
+                                <input type="tel" id="phone" class="partner-body__input form-input" required>
                             </div>
                         </div>
 
                         <div class="notes">
-                            <label for="notes" class="form-label">Notes</label>
-                            <textarea name="notes" id="notes" class="form-input">sdad</textarea>
+                            <label for="notes" class="partner-body__label form-label">Notes</label>
+                            <textarea name="notes" id="notes" class="partner-body__textarea form-input">sdad</textarea>
                         </div>
+
+                        <button class="submit__btn accent-btn" type="submit">SEND</button>
                     </form>
                 </div>
             </div>
-
         </div>
     </div>
 
+    <div class="contact">
+        <div class="container">
+            <div class="contact-body">
+                <article class="contact-body__card">
+                    <img src="img/contactPhone.png" alt="" class="contact-body__img">
 
+                    <h4 class="contact-body__title">Phone Number</h4>
+                    <a href="tel:+37360895556" class="contact-body__text">+373 60 89 55 56</a>
+                </article>
 
+                <article class="contact-body__card">
+                    <img src="img/contactEmail.png" alt="" class="contact-body__img">
+
+                    <h4 class="contact-body__title">Email</h4>
+                    <a href="mailto:alma.lawson@example.com" class="contact-body__text">alma.lawson@example.com</a>
+                </article>
+
+                <article class="contact-body__card">
+                    <img src="img/contactAdress.png" alt="" class="contact-body__img">
+
+                    <h4 class="contact-body__title">Phone Number</h4>
+                    <adress class="contact-body__text">2972 Westheimer Rd. Santa Ana, Illinois 85486 </adress>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <div class="map" id="map"></div>
+
+    @@include('_footer.html')
 
     <!-- SCRTIPTS -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGV0ZaHT3PLW1JCvlRfzytQoOaUVXk-ck&callback=initMap&libraries=&v=weekly" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.0/simplebar.min.js" integrity="sha512-AS9rZZDdb+y4W2lcmkNGwf4swm6607XJYpNST1mkNBUfBBka8btA6mgRmhoFQ9Umy8Nj/fg5444+SglLHbowuA==" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
     <!-- SCRTIPTS -->
