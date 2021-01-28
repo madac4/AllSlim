@@ -9,11 +9,27 @@
     <!-- STYLE -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.0/simplebar.min.css" integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
     <!-- STYLE -->
 </head>
 
 <body>
+
+    <button class="scroll__top">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;"
+            xml:space="preserve">
+            <g>
+                <path d="M282.082,195.285L149.028,62.24c-1.901-1.903-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,195.285
+                    C0.95,197.191,0,199.378,0,201.853c0,2.474,0.953,4.664,2.856,6.566l14.272,14.271c1.903,1.903,4.093,2.854,6.567,2.854
+                    c2.474,0,4.664-0.951,6.567-2.854l112.204-112.202l112.208,112.209c1.902,1.903,4.093,2.848,6.563,2.848
+                    c2.478,0,4.668-0.951,6.57-2.848l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.566
+                    C284.929,199.378,283.984,197.188,282.082,195.285z"/>
+            </g>
+        </svg>
+    </button>
+
     <div class="upper-header">
         <div class="container">
             <div class="upper-header__content">
@@ -22,6 +38,7 @@
             </div>
         </div>
     </div>
+
     @@include('_header.html')
 
     <main>
@@ -31,25 +48,29 @@
                     <div class="container">
                         <h2 class="swiper-slide__title">Fine organic <br> teas</h2>
                         <p class="swiper-slide__subtitle">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-                        <a href="" class="swiper-slide__btn">Shop Now</a>
+                        <a href="" class="swiper-slide__btn accent-btn">Shop Now</a>
                     </div>
                 </div>
+
                 <div class="swiper-slide" style="background: url('img/swiper_img.jpg') 50% 50% / cover no-repeat;">
                     <div class="container">
                         <h2 class="swiper-slide__title">Fine vegetable <br> teas for your body</h2>
                         <p class="swiper-slide__subtitle">Amet Lorem ipsum dolor sit amet. minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-                        <a href="" class="swiper-slide__btn">Shop Now</a>
+                        <a href="" class="swiper-slide__btn accent-btn">Shop Now</a>
                     </div>
                 </div>
+
                 <div class="swiper-slide" style="background: url('img/swiper_img.jpg') 50% 50% / cover no-repeat;">
                     <div class="container">
                         <h2 class="swiper-slide__title">Fine organic <br> teas for mind</h2>
                         <p class="swiper-slide__subtitle">Amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptas eligendi sapiente nihil veniam quasi expedita dicta, tenetur sit! Eos! minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                             consequat duis enim velit mollit.</p>
-                        <a href="" class="swiper-slide__btn">Shop Now</a>
+                        <a href="" class="swiper-slide__btn accent-btn">Shop Now</a>
                     </div>
                 </div>
+
             </div>
+
             <div class="swiper-control">
                 <div class="swiper-prev swiper-arrow" style="background: url('img/prev.svg') 50% 50% / cover no-repeat;"></div>
                 <div class="swiper-dots"></div>
@@ -64,17 +85,20 @@
                     <h3 class="features-header__title section-title">Features</h3>
                     <p class="features-header__text section-text">Slimming teas are often advertised as a way to lose weight and cleanse the body. The theory is that the tea stimulates digestion, aids metabolism</p>
                 </div>
+
                 <div class="features-body">
                     <div class="features-body__card">
                         <img src="img/feature1.svg" alt="" class="features-body__image">
                         <h5 class="features-body__title">Eco Technologies</h5>
                         <p class="features-body__text">Slimming teas are often advertised as a way to lose weight and cleanse the body. The theory is that the tea stimulates digestion, aids metabolism</p>
                     </div>
+
                     <div class="features-body__card">
                         <img src="img/feature2.svg" alt="" class="features-body__image">
                         <h5 class="features-body__title">Good Taste</h5>
                         <p class="features-body__text">Slimming teas are often advertised as a way to lose weight and cleanse the body. The theory is that the tea stimulates digestion, aids metabolism</p>
                     </div>
+
                     <div class="features-body__card">
                         <img src="img/feature3.svg" alt="" class="features-body__image">
                         <h5 class="features-body__title">Slim Your Body</h5>
@@ -90,6 +114,7 @@
                     <span class="category-header__minititle section-minititle">Produsele Noastre</span>
                     <h3 class="category-header__title section-title">Categories</h3>
                 </div>
+
                 <div class="category-body">
                     <article class="category-body__card">
                         <div class="category-body__img" style="background: url('img/category1.jpg') 50% 50% / cover no-repeat;"></div>
@@ -98,9 +123,9 @@
                         <a href="#" class="category-body__link">
                             <h4 class="category-body__title">Natural Tea</h4>
                         </a>
-                        <p class="category-body__text">sAmet minim mollit non deserunt ullamco sint. Velit officia consequat duis enim velit mollit.
-                        </p>
-                        <a href="#" class="category-body__btn">
+
+                        <p class="category-body__text">sAmet minim mollit non deserunt ullamco sint. Velit officia consequat duis enim velit mollit.</p>
+                        <a href="#" class="category-body__btn accent-btn">
                             <span>shop now</span>
                             <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.220345 0.968997C0.150501 1.03867 0.0950861 1.12143 0.0572767 1.21255C0.0194669 1.30366 5.72205e-06 1.40135 5.72205e-06 1.5C5.72205e-06 1.59865 0.0194669 1.69633 0.0572767 1.78745C0.0950861 1.87857 0.150501 1.96133 0.220345 2.031L4.19085 6L0.220345 9.969C0.150614 10.0387 0.0952992 10.1215 0.0575604 10.2126C0.0198221 10.3037 0.000397682 10.4014 0.000397682 10.5C0.000397682 10.5986 0.0198221 10.6963 0.0575604 10.7874C0.0952992 10.8785 0.150614 10.9613 0.220345 11.031C0.290078 11.1007 0.372861 11.156 0.46397 11.1938C0.555079 11.2315 0.65273 11.2509 0.751346 11.2509C0.849961 11.2509 0.947612 11.2315 1.03872 11.1938C1.12983 11.156 1.21261 11.1007 1.28235 11.031L5.78234 6.531C5.85219 6.46133 5.9076 6.37856 5.94541 6.28745C5.98322 6.19633 6.00269 6.09865 6.00269 6C6.00269 5.90135 5.98322 5.80366 5.94541 5.71255C5.9076 5.62143 5.85219 5.53866 5.78234 5.469L1.28235 0.968997C1.21268 0.899153 1.12991 0.843738 1.0388 0.805928C0.947679 0.768119 0.849997 0.748657 0.751346 0.748657C0.652695 0.748657 0.555013 0.768119 0.463895 0.805928C0.372777 0.843738 0.290014 0.899153 0.220345 0.968997Z" fill="white"/>
@@ -110,13 +135,14 @@
 
                     <article class="category-body__card">
                         <div class="category-body__img" style="background: url('img/category2.jpg') 50% 50% / cover no-repeat;"></div>
+
                         <small class="category-body__num category-body__num--dark">02</small>
                         <a href="#" class="category-body__link">
                             <h4 class="category-body__title category-body__title--dark">Dish</h4>
                         </a>
                         <p class="category-body__text category-body__text--dark">sAmet minim mollit non deserunt ullamco sint. Velit officia consequat duis enim velit mollit.
                         </p>
-                        <a href="#" class="category-body__btn">
+                        <a href="#" class="category-body__btn accent-btn">
                             <span>shop now</span>
                             <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.220345 0.968997C0.150501 1.03867 0.0950861 1.12143 0.0572767 1.21255C0.0194669 1.30366 5.72205e-06 1.40135 5.72205e-06 1.5C5.72205e-06 1.59865 0.0194669 1.69633 0.0572767 1.78745C0.0950861 1.87857 0.150501 1.96133 0.220345 2.031L4.19085 6L0.220345 9.969C0.150614 10.0387 0.0952992 10.1215 0.0575604 10.2126C0.0198221 10.3037 0.000397682 10.4014 0.000397682 10.5C0.000397682 10.5986 0.0198221 10.6963 0.0575604 10.7874C0.0952992 10.8785 0.150614 10.9613 0.220345 11.031C0.290078 11.1007 0.372861 11.156 0.46397 11.1938C0.555079 11.2315 0.65273 11.2509 0.751346 11.2509C0.849961 11.2509 0.947612 11.2315 1.03872 11.1938C1.12983 11.156 1.21261 11.1007 1.28235 11.031L5.78234 6.531C5.85219 6.46133 5.9076 6.37856 5.94541 6.28745C5.98322 6.19633 6.00269 6.09865 6.00269 6C6.00269 5.90135 5.98322 5.80366 5.94541 5.71255C5.9076 5.62143 5.85219 5.53866 5.78234 5.469L1.28235 0.968997C1.21268 0.899153 1.12991 0.843738 1.0388 0.805928C0.947679 0.768119 0.849997 0.748657 0.751346 0.748657C0.652695 0.748657 0.555013 0.768119 0.463895 0.805928C0.372777 0.843738 0.290014 0.899153 0.220345 0.968997Z" fill="white"/>
@@ -143,10 +169,10 @@
                     <h3 class="best-header__title section-title">Our best sellers</h3>
                     <p class="best-header__text section-text">Slimming teas are often advertised as a way to lose weight and cleanse the body. The theory is that the tea stimulates digestion, aids metabolism, and, in some cases, rids the body of impurities. </p>
                 </div>
-                <div class="best-body">
 
+                <div class="best-body">
                     <article class="product">
-                        <span class="product__lable">-20%</span>
+                        <span class="product__offer">-20%</span>
                         <a href="#" class="product__link">
                             <img src="img/best1.png" alt="Tea" class="product__img">
                         </a>
@@ -158,20 +184,20 @@
                                 <span class="product__realprice">300 lei</span>
                                 <h6 class="product__price">250 lei</h6>
                                 <button class="add_to_cart">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
-                                </svg>
-                            </button>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </article>
 
                     <article class="product">
-                        <span class="product__lable product__lable--red">Top</span>
+                        <span class="product__offer product__offer--red">Top</span>
                         <a href="#" class="product__link">
                             <img src="img/best2.png" alt="Tea" class="product__img">
                         </a>
-                        <h6 class="product__name">ALL SLIM Anticelulitic tea</h6>
+                        <h6 class="product__name">ALL SLIM Default tea</h6>
                         <p class="product__descr"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
                         <div class="product__bottom">
                             <small class="product__weight">200g</small>
@@ -179,16 +205,16 @@
                                 <span class="product__realprice">300 lei</span>
                                 <h6 class="product__price">250 lei</h6>
                                 <button class="add_to_cart">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
-                                </svg>
-                            </button>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </article>
 
                     <article class="product">
-                        <span class="product__lable">-20%</span>
+                        <span class="product__offer">-20%</span>
                         <a href="#" class="product__link">
                             <img src="img/best3.png" alt="Tea" class="product__img">
                         </a>
@@ -199,15 +225,15 @@
                             <div class="product__buyinfo">
                                 <h6 class="product__price">300 lei</h6>
                                 <button class="add_to_cart">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
-                                </svg>
-                            </button>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </article>
-
                 </div>
+
                 <div class="best-btn">
                     <a href="#" class="dark_btn">see all products</a>
                 </div>
@@ -220,10 +246,11 @@
                     <span class="about__minititle section-minititle">Produsele noastre</span>
                     <h3 class="about__title section-title">About our tea</h3>
                     <p class="about__text section-text">Suntem noul tău brand preferat de încredere pentru un stil de viață sănătos, certificat și aprobat de specialiști, care combină și oferă soluțiile perfecte pentru o rutină sănătoasă și inteligentă și care se bazează pe un angajament
-                        ferm pentru calitate premium.</p>
-
+                        ferm pentru calitate premium.
+                    </p>
                     <a href="#" class="about__btn dark_btn">Afla mai mult</a>
                 </div>
+
                 <div class="about__image" style="background: url('img/women.png') 50% 50% / cover no-repeat;"></div>
             </div>
         </div>
@@ -236,6 +263,7 @@
                     <p class="feedback__text section-text">Slimming teas are often advertised as a way to lose weight and cleanse the body. The theory is that the tea stimulates digestion, aids metabolism, and, in some cases, rids the body of impurities. </p>
                 </div>
             </div>
+
             <div class="feedback__swiper">
                 <div class="swiper-wrapper">
                     <div class="feedback__swiper-slide swiper-slide">
@@ -250,6 +278,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="feedback__swiper-slide swiper-slide">
                         <div class="feedback-slide__card">
                             <a href="#" class="feedback-slide__user" style="background: url('img/user_img2.jpg') 50% 50% / cover no-repeat;"></a>
@@ -263,6 +292,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="feedback__swiper-slide swiper-slide">
                         <div class="feedback-slide__card">
                             <a href="#" class="feedback-slide__user" style="background: url('img/user_img2.jpg') 50% 50% / cover no-repeat;"></a>
@@ -276,6 +306,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="swiper-control">
                     <div class="swiper-prev swiper-arrow" style="background: url('img/prev.svg') 50% 50% / cover no-repeat;"></div>
                     <div class="swiper-dots"></div>
@@ -289,6 +320,7 @@
 
 
     <!-- SCRTIPTS -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.0/simplebar.min.js" integrity="sha512-AS9rZZDdb+y4W2lcmkNGwf4swm6607XJYpNST1mkNBUfBBka8btA6mgRmhoFQ9Umy8Nj/fg5444+SglLHbowuA==" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>

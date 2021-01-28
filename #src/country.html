@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Country</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/choices.js/3.0.4/styles/css/choices.min.css" integrity="sha512-x7ERT6DMhtdz/BdiPhbjGFIG6uzE5TRQZ3VbQFBllZAmwWvSiANFs1H4d92EN5fcv/JaNp0P3/lTdT8/5SX1GQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- STYLE -->
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="wrapper__select">
+                <div class="wrapper__logo logo">
+                    <a href="#"><img src="img/logo.svg" alt="logo"></a>
+                </div>
+
+                <span class="wrapper__minititle section-minititle">Welcome</span>
+                <h1 class="wrapper__title section-title">Select your country</h1>
+
+                <form action="#" class="wrapper__form">
+                    <label for="country" class="form-label">Your Country<span>*</span></label>
+                    <select name="country" id="country" class="form__countrypicker form-input" required>
+                        <option value="Moldova" class="choices__item">Moldova</option>
+                        <option value="Rusia" class="choices__item">Rusia</option>
+                        <option value="Ukraina" class="choices__item">Ukraina</option>
+                        <option value="Romanaia" class="choices__item">Romanaia</option>
+                    </select>
+                </form>
+
+                <a href="#" class="wrapper__btn accent-btn">go shopping</a>
+            </div>
+            <div class="wrapper__img" style="background: url('img/country.jpg') 50% 50% / cover no-repeat;"></div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <!-- SCRTIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/3.0.4/choices.min.js" integrity="sha512-9N5Sv1fzjEnf4wx08TbEyjgtd9hXBi4GdjmCfmc5sXqX5M4S4lfrrFXWZMkUCWi2Uo1LCnjZEFGh075qIbBL8w==" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <!-- SCRTIPTS -->
+</body>
+
+</html>

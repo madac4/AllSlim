@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>All Slim - Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.0/simplebar.min.css" integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- STYLE -->
+</head>
+
+<body>
+
+    @@include('_header.html')
+
+    <button class="scroll__top">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;"
+            xml:space="preserve">
+            <g>
+                <path d="M282.082,195.285L149.028,62.24c-1.901-1.903-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,195.285
+                    C0.95,197.191,0,199.378,0,201.853c0,2.474,0.953,4.664,2.856,6.566l14.272,14.271c1.903,1.903,4.093,2.854,6.567,2.854
+                    c2.474,0,4.664-0.951,6.567-2.854l112.204-112.202l112.208,112.209c1.902,1.903,4.093,2.848,6.563,2.848
+                    c2.478,0,4.668-0.951,6.57-2.848l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.566
+                    C284.929,199.378,283.984,197.188,282.082,195.285z"/>
+            </g>
+        </svg>
+    </button>
+
+    <div class="shop">
+        <div class="container">
+            <div class="shop-header">
+                <h2 class="shop-header__title section-title">SHOP</h2>
+            </div>
+            <div class="shop-category">
+                <ul class="shop-category__list">
+                    <li class="shop-category__item"><a href="#" class="shop-category__link active">Toate Produsele</a></li>
+                    <li class="shop-category__item"><a href="#" class="shop-category__link">Sale</a></li>
+                    <li class="shop-category__item"><a href="#" class="shop-category__link">Detox Tea</a></li>
+                    <li class="shop-category__item"><a href="#" class="shop-category__link">Anticelulitic tea</a></li>
+                    <li class="shop-category__item"><a href="#" class="shop-category__link">Dish</a></li>
+                </ul>
+            </div>
+            <div class="shop-body">
+                <article class="product product--shop">
+                    <span class="product__offer product__offer--shop">-20%</span>
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best2.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">250 lei</h6>
+                            <span class="product__realprice product__realprice--shop">300 lei</span>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product--shop">
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best2.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">450 lei</h6>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product--shop">
+                    <span class="product__offer product__offer--shop">-20%</span>
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best3.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">250 lei</h6>
+                            <span class="product__realprice product__realprice--shop">300 lei</span>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product--shop">
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best1.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">400 lei</h6>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product--shop">
+                    <span class="product__offer product__offer--shop">-20%</span>
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best2.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">250 lei</h6>
+                            <span class="product__realprice product__realprice--shop">300 lei</span>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product--shop">
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best2.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">450 lei</h6>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product--shop">
+                    <span class="product__offer product__offer--shop">-20%</span>
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best3.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">250 lei</h6>
+                            <span class="product__realprice product__realprice--shop">300 lei</span>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product--shop">
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best1.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">400 lei</h6>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product--shop">
+                    <span class="product__offer product__offer--shop">-20%</span>
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best2.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">250 lei</h6>
+                            <span class="product__realprice product__realprice--shop">300 lei</span>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product--shop">
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best2.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">450 lei</h6>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product--shop">
+                    <span class="product__offer product__offer--shop">-20%</span>
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best3.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">250 lei</h6>
+                            <span class="product__realprice product__realprice--shop">300 lei</span>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product--shop">
+                    <span class="product__weight product__weight--shop">200g</span>
+
+                    <a href="#" class="product__link product__link--shop">
+                        <img src="img/best1.png" alt="Tea" class="product__img product__img--shop">
+                    </a>
+
+                    <h6 class="product__name product__name--shop">ALL SLIM Anticelulitic tea</h6>
+                    <p class="product__descr product__descr--shop"><span>Effect: </span>Favorizează eliminarea toxinelor din organism</p>
+
+                    <div class="product__bottom product__bottom--shop">
+                        <div class="product__prices product__prices--shop">
+                            <h6 class="product__price product__price--shop">400 lei</h6>
+                        </div>
+                        <div class="product__buyinfo">
+                            <button class="add_to_cart">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4 3.04506C10.6879 3.04506 9.3 4.43297 9.3 6.14505V8.14352H15.5V6.14506C15.5 4.43297 14.1121 3.04506 12.4 3.04506ZM17.3 8.14352V6.14506C17.3 3.43886 15.1062 1.24506 12.4 1.24506C9.69381 1.24506 7.5 3.43886 7.5 6.14505V8.14352H5.9C4.85066 8.14352 4 8.99418 4 10.0435V20.855C4 21.9043 4.85066 22.755 5.9 22.755H18.9C19.9493 22.755 20.8 21.9043 20.8 20.855V10.0435C20.8 8.99418 19.9493 8.14352 18.9 8.14352H17.3ZM5.9 9.94352C5.84477 9.94352 5.8 9.98829 5.8 10.0435V20.855C5.8 20.9102 5.84477 20.955 5.9 20.955H18.9C18.9552 20.955 19 20.9102 19 20.855V10.0435C19 9.98829 18.9552 9.94352 18.9 9.94352H16.4H8.4H5.9ZM9.4 12.0144C9.4 12.5667 8.95229 13.0144 8.4 13.0144C7.84772 13.0144 7.4 12.5667 7.4 12.0144C7.4 11.4622 7.84772 11.0144 8.4 11.0144C8.95229 11.0144 9.4 11.4622 9.4 12.0144ZM16.4 13.0144C16.9523 13.0144 17.4 12.5667 17.4 12.0144C17.4 11.4622 16.9523 11.0144 16.4 11.0144C15.8477 11.0144 15.4 11.4622 15.4 12.0144C15.4 12.5667 15.8477 13.0144 16.4 13.0144Z" fill="#fff"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="shop-more">
+                <a href="#" class="upload__more">Upload More</a>
+            </div>
+        </div>
+    </div>
+
+    @@include('_footer.html')
+
+
+
+
+
+    <!-- SCRTIPTS -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.0/simplebar.min.js" integrity="sha512-AS9rZZDdb+y4W2lcmkNGwf4swm6607XJYpNST1mkNBUfBBka8btA6mgRmhoFQ9Umy8Nj/fg5444+SglLHbowuA==" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <!-- SCRTIPTS -->
+</body>
+
+</html>
