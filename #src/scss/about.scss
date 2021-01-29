@@ -6,6 +6,21 @@
             @media (max-width: $md2+px) {
                 margin-bottom: 50px;
             }
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                background: url('../img/storyLeaf.png') 50% 50% / cover no-repeat;
+                width: 321px;
+                height: 300px;
+                left: -200px;
+                z-index: -1;
+                bottom: 50px;
+                transform: rotate(-10deg);
+                @media (max-width: $md1+px) {
+                    display: none;
+                }
+            }
         }
         &__block.body-content__block--about {
             padding: 80px 100px 0px 100px;
@@ -35,21 +50,6 @@
                 @media (max-width: $md3+px) {
                     font-size: 16px;
                 }
-            }
-        }
-        &::before {
-            content: '';
-            position: absolute;
-            display: block;
-            background: url('../img/storyLeaf.png') 50% 50% / cover no-repeat;
-            width: 321px;
-            height: 300px;
-            left: -200px;
-            z-index: -1;
-            bottom: 50px;
-            transform: rotate(-10deg);
-            @media (max-width: $md1+px) {
-                display: none;
             }
         }
     }
@@ -165,26 +165,46 @@
 .questions {
     padding: 100px 0px;
     background-color: #F3F3F3;
-    .questions__minititle {
-        display: block;
-        text-align: center;
-    }
-    .questions__title {
-        text-align: center;
-        font-size: 35px;
-    }
-    .questions__text {
-        line-height: 30px;
-        text-align: center;
-        max-width: 540px;
-        margin: 0 auto;
-        margin-bottom: 40px;
-        @media (max-width: $md3+px) {
-            font-size: 16px;
+    .questions-content {
+        position: relative;
+        .questions__minititle {
+            display: block;
+            text-align: center;
         }
-    }
-    .questions__btn {
-        width: 255px;
-        margin: 0 auto;
+        .questions__title {
+            text-align: center;
+            font-size: 35px;
+        }
+        .questions__text {
+            line-height: 30px;
+            text-align: center;
+            max-width: 540px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            @media (max-width: $md3+px) {
+                font-size: 16px;
+            }
+        }
+        .questions__btn {
+            width: 255px;
+            margin: 0 auto;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            background: url('../img/tea-cup.png') 50% 50% / cover no-repeat;
+            width: 400px;
+            height: 400px;
+            right: -100px;
+            top: 45%;
+            transform: translateY(-55%);
+            @media (max-width: $md1+px) {
+                right: -150px;
+            }
+            @media (max-width: $md2+px) {
+                display: none;
+            }
+        }
     }
 }

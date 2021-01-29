@@ -13,6 +13,28 @@ if (header != undefined) {
 }
 // Burger Menu
 
+// Scroll To Top
+const scrollToTop = document.querySelector('.scroll__top');
+if (scrollToTop != undefined) {
+
+    window.addEventListener('scroll', () => {
+        let scrollPos = window.scrollY;
+        if (scrollPos > 500) {
+            scrollToTop.classList.add('active');
+            scrollToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            });
+        } else {
+            scrollToTop.classList.remove('active');
+
+        };
+    });
+}
+// Scroll To Top
+
 // Country Picker
 const choices = document.querySelector('.wrapper__form');
 if (choices != undefined) {
@@ -60,17 +82,14 @@ window.addEventListener('resize', () => {
 const mainSlide = document.querySelector('.swiper');
 if (mainSlide != undefined) {
     var mySwiper = new Swiper('.swiper', {
-        // Optional parameters
         direction: 'horizontal',
         loop: true,
         effect: 'fade',
-        // If we need pagination
         pagination: {
             el: '.swiper-dots',
             clickable: true,
         },
 
-        // Navigation arrows
         navigation: {
             nextEl: '.swiper-next',
             prevEl: '.swiper-prev',
@@ -104,6 +123,36 @@ if (feedbackSlide != undefined) {
     });
 };
 // Feedback Slider
+
+// Recent Slider
+const recentSlider = document.querySelector('.recent-post__swiper');
+
+if (recentSlider != undefined) {
+    var recentswiper = new Swiper('.recent-post__swiper', {
+        spaceBetween: 30,
+        loop: true,
+        grabCursor: true,
+        pagination: {
+            el: '.swiper-dots',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-next',
+            prevEl: '.swiper-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+
+            },
+            768: {
+                slidesPerView: 2,
+
+            },
+        }
+    });
+}
+// Recent Slider
 
 // Cart
 if (header != undefined) {

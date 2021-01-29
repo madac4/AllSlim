@@ -4,7 +4,7 @@
         text-align: center;
     }
     .body-content {
-        height: calc(1625px - 540px);
+        height: calc(1625px - 500px);
         @media (max-width: $md2+px) {
             height: 1000px;
         }
