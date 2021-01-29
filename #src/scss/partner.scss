@@ -1,20 +1,20 @@
-.partner {
+.content {
     padding: 60px 0;
-    &-header {
+    &__title {
         text-align: center;
-        .partner-header__title {
-            margin-bottom: 60px;
-        }
     }
-    &-body {
-        height: calc(1625px - 535px);
+    .body-content {
+        height: calc(1625px - 540px);
+        @media (max-width: $md2+px) {
+            height: 1000px;
+        }
         @media (max-width: $md3+px) {
             height: 100%;
         }
         @media (max-width: $md4+px) {
             height: 100%;
         }
-        .partner-body__img {
+        .body-content__image {
             width: 100%;
             height: 800px;
             @media (max-width: $md2+px) {
@@ -24,7 +24,7 @@
                 height: 300px;
             }
         }
-        .partner-body__contact {
+        .body-content__block {
             padding: 60px 50px 117px 50px;
             background-color: #fff;
             transform: translateY(-535px);
@@ -49,40 +49,38 @@
                 padding: 50px 0;
                 background-color: transparent;
             }
-            .partner-body__minititle {
-                margin-bottom: 25px;
-            }
-            .partner-body__title {
+            .body-content__title {
                 font-size: 35px;
+                margin-top: 25px;
                 margin-bottom: 60px;
                 @media (max-width: $md3+px) {
                     margin-bottom: $grid_gap;
                 }
             }
-            .partner-body__form {
-                .partner-body__grid {
+            .body-content__form {
+                .body-content__grid {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-gap: 20px $grid_gap;
                     @media (max-width: $md3+px) {
                         grid-template-columns: repeat(1, 1fr);
                     }
-                    .partner-body__field {
+                    .body-content__field {
                         position: relative;
-                        .partner-body__label {
+                        .body-content__label {
                             text-align: start;
                         }
-                        .partner-body__input {
+                        .body-content__input {
                             width: 100%;
                         }
                     }
                 }
                 .notes {
                     margin-top: 20px;
-                    .partner-body__label {
+                    .body-content__label {
                         text-align: start;
                     }
-                    .partner-body__textarea {
+                    .body-content__textarea {
                         font-family: 'Lato';
                         font-size: 16px;
                         width: 100%;

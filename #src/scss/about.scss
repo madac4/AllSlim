@@ -1,0 +1,190 @@
+.content {
+    padding-bottom: 0;
+    .body-content {
+        position: relative;
+        &--about {
+            @media (max-width: $md2+px) {
+                margin-bottom: 50px;
+            }
+        }
+        &__block.body-content__block--about {
+            padding: 80px 100px 0px 100px;
+            @media (max-width: $md2+px) {
+                padding: 50px 50px 0px 50px;
+            }
+            @media (max-width: $md3+px) {
+                width: 100%;
+                padding: 50px 0;
+            }
+            @media (max-width: $md4+px) {
+                padding: 50px 0;
+            }
+            .body-content__title--about {
+                font-size: 35px;
+                margin-bottom: 30px;
+                @media (max-width: $md3+px) {
+                    margin-bottom: 15px;
+                }
+                @media (max-width: $md4+px) {
+                    line-height: 42px;
+                }
+            }
+            .body-content__text--about {
+                line-height: 35px;
+                text-align: center;
+                @media (max-width: $md3+px) {
+                    font-size: 16px;
+                }
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            background: url('../img/storyLeaf.png') 50% 50% / cover no-repeat;
+            width: 321px;
+            height: 300px;
+            left: -200px;
+            z-index: -1;
+            bottom: 50px;
+            transform: rotate(-10deg);
+            @media (max-width: $md1+px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.process {
+    margin-bottom: 100px;
+    position: relative;
+    .process__minititle {
+        text-align: center;
+        display: block;
+    }
+    .process__title {
+        text-align: center;
+        font-size: 35px;
+    }
+    .process__text {
+        line-height: 30px;
+        text-align: center;
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        background: url('../img/processLeaf.png') 50% 50% / cover no-repeat;
+        width: 185px;
+        height: 355px;
+        right: 140px;
+        z-index: -1;
+        top: -150px;
+        @media (max-width: $md1+px) {
+            display: none;
+        }
+    }
+}
+
+.work {
+    .work__minititle {
+        display: block;
+        text-align: center;
+    }
+    .work__title {
+        text-align: center;
+        font-size: 35px;
+    }
+    .work__text {
+        line-height: 30px;
+        text-align: center;
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+        }
+    }
+    .steps {
+        margin-top: 100px;
+        margin-bottom: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: $md2+px) {
+            margin-bottom: 100px;
+        }
+        @media (max-width: $md3+px) {
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+        .step-card {
+            @media (max-width: $md3+px) {
+                margin-bottom: 50px;
+            }
+            &__img {
+                width: 55px;
+                height: 55px;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 40px;
+                @media (max-width: $md3+px) {
+                    margin-bottom: 20px;
+                }
+            }
+            &__info {
+                display: flex;
+                align-items: center;
+                .step-card__num {
+                    font-family: Playfair Display;
+                    font-size: 115px;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: $accent_color;
+                }
+                .step-card__text {
+                    .step-card__title {
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 30px;
+                        color: $dark_color;
+                        margin-bottom: 10px;
+                    }
+                    .step-card__info {
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #6C6D71;
+                        width: 155px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.questions {
+    padding: 100px 0px;
+    background-color: #F3F3F3;
+    .questions__minititle {
+        display: block;
+        text-align: center;
+    }
+    .questions__title {
+        text-align: center;
+        font-size: 35px;
+    }
+    .questions__text {
+        line-height: 30px;
+        text-align: center;
+        max-width: 540px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+        }
+    }
+    .questions__btn {
+        width: 255px;
+        margin: 0 auto;
+    }
+}
