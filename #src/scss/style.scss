@@ -10,6 +10,8 @@
 @import 'partner';
 @import 'about';
 @import 'blog-detail';
+@import 'feedback';
+@import 'blog';
 // GLOBAL STYLES
 .alertify-notifier {
     top: 20px;
@@ -284,6 +286,51 @@
                 }
             }
         }
+    }
+}
+
+.feedback-username {
+    font-weight: 600;
+    font-size: $main_size;
+    line-height: 25px;
+    color: $dark_color;
+    margin-bottom: 20px;
+    transition: color .3s;
+    @media (max-width: $md4+px) {
+        font-size: $btn_size;
+        line-height: 20px;
+    }
+    &:hover {
+        color: $accent_color;
+    }
+}
+
+.feedback-comment {
+    font-size: 14px;
+    line-height: 20px;
+    color: $dark_color;
+    @media (max-width: $md4+px) {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+.upload__more {
+    background-color: transparent;
+    border: 1px solid #282A33;
+    display: block;
+    margin: 0 auto;
+    width: 215px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 18px 0px;
+    font-size: $btn_size;
+    line-height: 19px;
+    color: $dark_color;
+    transition: background-color .3s, color .3s;
+    &:hover {
+        color: #fff;
+        background-color: $dark_hover;
     }
 }
 
@@ -703,15 +750,6 @@
                     }
                     .feedback-slide__user {
                         min-width: 310px;
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            display: block;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                        }
                         @media (max-width: $md3+px) {
                             min-width: 200px;
                         }
@@ -730,26 +768,6 @@
                         }
                         @media (max-width: $md3+px) {
                             padding: 20px 20px;
-                        }
-                        .feedback-slide__username {
-                            font-weight: 600;
-                            font-size: $main_size;
-                            line-height: 25px;
-                            color: $dark_color;
-                            margin-bottom: 20px;
-                            @media (max-width: $md4+px) {
-                                font-size: $btn_size;
-                                line-height: 20px;
-                            }
-                        }
-                        .feedback-slide__comment {
-                            font-size: 14px;
-                            line-height: 20px;
-                            color: $dark_color;
-                            @media (max-width: $md4+px) {
-                                font-size: 12px;
-                                line-height: 18px;
-                            }
                         }
                     }
                 }

@@ -126,23 +126,4 @@
             }
         }
     }
-    &-more {
-        .upload__more {
-            background-color: transparent;
-            border: 1px solid #282A33;
-            display: block;
-            margin: 0 auto;
-            width: 215px;
-            text-align: center;
-            padding: 18px 0px;
-            font-size: $btn_size;
-            line-height: 19px;
-            color: $dark_color;
-            transition: background-color .3s, color .3s;
-            &:hover {
-                color: #fff;
-                background-color: $dark_hover;
-            }
-        }
-    }
 }
