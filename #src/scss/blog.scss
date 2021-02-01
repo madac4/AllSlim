@@ -1,5 +1,8 @@
 .blog {
     padding: 60px 0px 170px 0px;
+    @media (max-width: $md3+px) {
+        padding: 40px 0px 100px 0px;
+    }
     .blog__title {
         text-align: center;
     }
@@ -12,10 +15,16 @@
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 30px;
         margin-bottom: 60px;
+        @media (max-width: $md3+px) {
+            grid-gap: 0;
+        }
         .blog__grid-list {
             grid-column: 3 span;
             display: grid;
             grid-gap: 30px;
+            @media (max-width: $md3+px) {
+                grid-column: 4 span;
+            }
             .blog__grid-item {
                 margin-top: 30px;
                 position: relative;
@@ -31,12 +40,30 @@
                 }
                 .blog__grid-article {
                     display: flex;
+                    @media (max-width: $md4+px) {
+                        display: block;
+                    }
                     .blog__grid-image {
                         width: 445px;
                         height: 330px;
+                        @media (max-width: $md2+px) {
+                            width: 300px;
+                            height: 250px;
+                        }
+                        @media (max-width: $md2+px) {
+                            width: 250px;
+                            height: 200px;
+                        }
+                        @media (max-width: $md4+px) {
+                            margin-bottom: 20px;
+                            width: 100%;
+                        }
                     }
                     .blog__grid-info {
                         padding-left: $grid_gap;
+                        @media (max-width: $md2+px) {
+                            padding-left: 15px;
+                        }
                         .blog__grid-time {
                             margin-bottom: 10px;
                             font-size: 12px;
@@ -55,6 +82,9 @@
                             font-size: 14px;
                             line-height: 25px;
                             color: $dark-color;
+                            @media (max-width: $md2+px) {
+                                margin-bottom: 30px;
+                            }
                         }
                         .blog__grid-btn {
                             font-weight: normal;
@@ -82,6 +112,9 @@
         }
         .blog__ads {
             margin-top: 30px;
+            @media (max-width: $md3+px) {
+                grid-column: 2 span;
+            }
             .blog__ads-block {
                 width: 100%;
                 color: $dark-color;
@@ -90,6 +123,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @media (max-width: $md2+px) {
+                    height: 300px;
+                }
             }
         }
     }

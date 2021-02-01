@@ -2303,6 +2303,25 @@ button {
     right: -150px;
   }
 
+  .feedback-section .feedback-content .feedback-content__grid {
+    grid-gap: 30px 20px;
+  }
+
+  .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content {
+    width: 400px;
+    min-height: 320px;
+    padding: 20px 10px 20px 145px;
+  }
+
+  .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content:nth-child(2n+1) {
+    margin-left: 80px;
+  }
+
+  .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content .feedback__article-img {
+    min-width: 230px;
+    height: 320px;
+  }
+
   .product {
     width: 310px;
     padding: 0 15px 15px 15px;
@@ -2419,6 +2438,37 @@ button {
   .recent-post .swiper-wrapper .swiper-slide .recent-wrapper__info .recent-wrapper__text {
     font-size: 18px;
     line-height: 26px;
+  }
+
+  .feedback-section .feedback-content .feedback-content__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .feedback-section .feedback-content .feedback-content__grid .feedback-content__article {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .blog .blog__grid .blog__grid-list .blog__grid-item .blog__grid-article .blog__grid-image {
+    width: 300px;
+    height: 250px;
+  }
+
+  .blog .blog__grid .blog__grid-list .blog__grid-item .blog__grid-article .blog__grid-image {
+    width: 250px;
+    height: 200px;
+  }
+
+  .blog .blog__grid .blog__grid-list .blog__grid-item .blog__grid-article .blog__grid-info {
+    padding-left: 15px;
+  }
+
+  .blog .blog__grid .blog__grid-list .blog__grid-item .blog__grid-article .blog__grid-info .blog__grid-text {
+    margin-bottom: 30px;
+  }
+
+  .blog .blog__grid .blog__ads .blog__ads-block {
+    height: 300px;
   }
 
   .product {
@@ -2855,6 +2905,38 @@ button {
     min-height: 150px;
   }
 
+  .feedback-section {
+    padding: 40px 0 100px 0;
+  }
+
+  .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content:nth-child(2n+1) {
+    margin-left: 70px;
+  }
+
+  .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content .feedback__article-img {
+    min-width: 220px;
+    height: 320px;
+    -webkit-transform: translateX(55%);
+        -ms-transform: translateX(55%);
+            transform: translateX(55%);
+  }
+
+  .blog {
+    padding: 40px 0px 100px 0px;
+  }
+
+  .blog .blog__grid {
+    grid-gap: 0;
+  }
+
+  .blog .blog__grid .blog__grid-list {
+    grid-column: 4 span;
+  }
+
+  .blog .blog__grid .blog__ads {
+    grid-column: 2 span;
+  }
+
   .product {
     margin: 0 auto;
     width: 60%;
@@ -3081,6 +3163,44 @@ button {
 
   .recent-post .swiper-wrapper .swiper-slide .recent-wrapper__img {
     width: 150px;
+  }
+
+  .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+  }
+
+  .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content:nth-child(2n+1) {
+    margin-left: 0;
+  }
+
+  .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content .feedback__article-img {
+    position: relative;
+    left: 0;
+    width: 90%;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content .feedback__article-comment {
+    max-width: 100%;
+  }
+
+  .blog .blog__grid .blog__grid-list .blog__grid-item .blog__grid-article {
+    display: block;
+  }
+
+  .blog .blog__grid .blog__grid-list .blog__grid-item .blog__grid-article .blog__grid-image {
+    margin-bottom: 20px;
+    width: 100%;
   }
 
   .product {
