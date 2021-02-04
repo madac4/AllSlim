@@ -48,6 +48,22 @@ if (choices != undefined) {
 }
 // Country Picker
 
+//Cart Country Picker
+const cartChoices = document.querySelector('.cart-form');
+if (cartChoices != undefined) {
+    const countryPicker = () => {
+        const element = document.querySelector('.form__countrypicker');
+        const choices = new Choices(element, {
+            searchEnabled: false,
+            classNames: {
+                containerInner: 'picker__container',
+            },
+        });
+    };
+    countryPicker();
+}
+//Cart Country Picker
+
 // Responsive Languages
 window.addEventListener('resize', () => {
     function adaptive_header(w, h) {
@@ -242,22 +258,22 @@ if (header != undefined) {
     const generateCartProduct = (img, title, price, id) => {
         return `
     
-    <li class="cart-content__item">
-        <article class="cart-content__product cart-product" data-id="${id}">
-            <a href="#" class="cart-content__link">
-                <img src="${img}" alt="tea" class="cart-product__img">
-            </a>
-            <div class="cart-product__text">
-                <h6 class="cart-product__title">${title}</h6>
-                <span class="cart-product__price">${normalPrice(price)} lei</span>
-            </div>
-            <button class="cart-product__delete" aria-label="Delete">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 1.05L10.95 0L6 4.95L1.05 0L0 1.05L4.95 6L0 10.95L1.05 12L6 7.05L10.95 12L12 10.95L7.05 6L12 1.05Z" fill="#6C6D71"/>
-                </svg>
-            </button>
-        </article>
-    </li>
+        <li class="cart-content__item">
+            <article class="cart-content__product cart-product" data-id="${id}">
+                <a href="#" class="cart-content__link">
+                    <img src="${img}" alt="tea" class="cart-product__img">
+                </a>
+                <div class="cart-product__text">
+                    <h6 class="cart-product__title">${title}</h6>
+                    <span class="cart-product__price">${normalPrice(price)} lei</span>
+                </div>
+                <button class="cart-product__delete" aria-label="Delete">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1.05L10.95 0L6 4.95L1.05 0L0 1.05L4.95 6L0 10.95L1.05 12L6 7.05L10.95 12L12 10.95L7.05 6L12 1.05Z" fill="#6C6D71"/>
+                    </svg>
+                </button>
+            </article>
+        </li>
     
     `;
     }
@@ -306,4 +322,61 @@ if (map != undefined) {
             map: map,
         });
     };
-}
+};
+
+
+
+const steps = document.querySelectorAll('.step__point');
+const btnNext = document.querySelectorAll('.prodcut__checkout-submit');
+let allContent = document.querySelectorAll('.cart-content__section');
+let allTitles = document.querySelectorAll('.cart-content__title');
+
+let activeStep = 0;
+
+window.addEventListener("DOMContentLoaded", () => {
+    if (steps[0].getAttribute('data-number') === allContent[1].getAttribute('data-number')) {
+        allContent[0].style.display = "block";
+    } else {
+        allContent[1].style.display = "none";
+        allContent[2].style.display = "none";
+
+    };
+    if (steps[0].getAttribute('data-number') === allTitles[1].getAttribute('data-number')) {
+        allTitles[0].style.display = "block";
+    } else {
+        allTitles[1].style.display = "none";
+        allTitles[2].style.display = "none";
+
+    };
+});
+
+
+for (let step of steps) {
+    steps.forEach((e) => {
+        e.addEventListener('click', () => {
+            const active = document.querySelector(".active");
+            if (active) {
+                active.classList.remove("active");
+            }
+            e.classList.add('active');
+        })
+    });
+
+    step.addEventListener('click', () => {
+        for (let content of allContent) {
+            if (content.getAttribute('data-number') === step.getAttribute('data-number')) {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+
+        }
+        for (let title of allTitles) {
+            if (title.getAttribute('data-number') === step.getAttribute('data-number')) {
+                title.style.display = "block";
+            } else {
+                title.style.display = "none";
+            }
+        }
+    });
+};
