@@ -75,14 +75,50 @@
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 grid-gap: 100px;
+                @media (max-width: $md2+px) {
+                    grid-gap: 30px;
+                    align-content: center;
+                }
+                @media (max-width: $md4+px) {
+                    display: block;
+                }
                 .cart-grid__form {
                     grid-column: 3 span;
+                    @media (max-width: $md2+px) {
+                        grid-column: 4 span;
+                    }
                     .cart-form {
                         display: grid;
                         grid-template-columns: repeat(6, 1fr);
                         grid-gap: 20px 30px;
                         margin-bottom: 60px;
+                        @media (max-width: $md4+px) {
+                            display: block;
+                        }
                         .form-field {
+                            @media (max-width: $md4+px) {
+                                &:nth-child(2) {
+                                    grid-column: 6 span;
+                                }
+                                &:nth-child(3) {
+                                    grid-column: 6 span;
+                                }
+                                &:nth-child(4) {
+                                    grid-column: 6 span;
+                                }
+                                &:nth-child(5) {
+                                    grid-column: 6 span;
+                                }
+                                &:nth-child(6) {
+                                    grid-column: 6 span;
+                                }
+                                &:nth-child(7) {
+                                    grid-column: 6 span;
+                                }
+                                &:nth-child(8) {
+                                    grid-column: 6 span;
+                                }
+                            }
                             &:nth-child(1) {
                                 grid-column: 6 span;
                             }
@@ -116,7 +152,6 @@
                             &:nth-child(11) {
                                 grid-column: 6 span;
                             }
-                            .form-field__label {}
                             .form-field__input {
                                 width: 100%;
                             }
@@ -326,6 +361,9 @@
         &--sidebar {
             margin-left: 0;
             margin-top: 25px;
+            @media (max-width: $md2+px) {
+                margin-left: auto;
+            }
         }
         .product__checkout--row {
             display: flex;
@@ -363,12 +401,6 @@
         height: 50px;
         padding: 10px;
         outline: none;
-        @media(max-width: $md1+px) {
-            width: 340px;
-        }
-        @media(max-width: $md3+px) {
-            width: 100%;
-        }
     }
     
     .choices__list--dropdown {
@@ -379,6 +411,9 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 100px;
+        @media (max-width: $md2+px) {
+            display: block;
+        }
         .payment-grid__information {
             grid-column: 3 span;
             .payment__information-title {
@@ -465,6 +500,9 @@
                 .payment-check__block {
                     display: flex;
                     justify-content: space-between;
+                    @media (max-width: $md4+px) {
+                        flex-direction: column;
+                    }
                     &:not(:last-child) {
                         margin-bottom: 25px;
                     }
@@ -472,6 +510,9 @@
                         font-size: 16px;
                         line-height: 19px;
                         color: #6C6D71;
+                        @media (max-width: $md4+px) {
+                            margin-bottom: 10px;
+                        }
                     }
                     .payment-check__data {
                         font-weight: 600;
@@ -482,6 +523,7 @@
                 }
             }
             .order__table {
+                margin-bottom: 60px;
                 .table {
                     border-collapse: collapse;
                     width: 100%;
@@ -557,11 +599,12 @@
         }
     }
     
-    .prodcut__checkout-submit.product__checkout-submit--back {
+    .product__checkout-submit--back {
         color: $accent_color;
         font-weight: 600;
         font-size: 16px;
         line-height: 19px;
         display: flex;
         justify-content: center;
+        margin-bottom: 20px;
     }

@@ -328,10 +328,11 @@ if (map != undefined) {
 
 const steps = document.querySelectorAll('.step__point');
 const btnNext = document.querySelectorAll('.prodcut__checkout-submit');
+const btnBack = document.querySelector('.product__checkout-submit--back');
 let allContent = document.querySelectorAll('.cart-content__section');
 let allTitles = document.querySelectorAll('.cart-content__title');
 
-let activeStep = 0;
+let activeStep = 1;
 
 window.addEventListener("DOMContentLoaded", () => {
     if (steps[0].getAttribute('data-number') === allContent[1].getAttribute('data-number')) {
@@ -349,7 +350,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     };
 });
-
 
 for (let step of steps) {
     steps.forEach((e) => {

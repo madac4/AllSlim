@@ -200,10 +200,10 @@
                             color: $accent_color;
                             background-color: transparent;
                             text-transform: uppercase;
-                            border: none;
-                            outline: none;
                             transition: color .3s;
                             font-size: $btn_size;
+                            display: flex;
+                            justify-content: center;
                             &:hover {
                                 color: $accent_hover;
                             }
