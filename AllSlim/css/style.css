@@ -1325,6 +1325,7 @@ button {
 .feedback-section .feedback-content .feedback-content__grid .feedback-content__article {
   margin-top: 30px;
   position: relative;
+  cursor: pointer;
 }
 
 .feedback-section .feedback-content .feedback-content__grid .feedback-content__article:nth-child(1)::before {
@@ -1379,6 +1380,104 @@ button {
 
 .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content .feedback__article-comment {
   max-width: 270px;
+}
+
+.feedback__modals .modals__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(35, 36, 42, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+  transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+  -o-transition: opacity .3s, visibility .3s, transform .3s;
+  transition: opacity .3s, visibility .3s, transform .3s;
+  transition: opacity .3s, visibility .3s, transform .3s, -webkit-transform .3s;
+}
+
+.feedback__modals .modals__overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.feedback__modals .modals__overlay .feedback__modal {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 660px;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+  transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+  -o-transition: opacity .3s, visibility .3s, transform .3s;
+  transition: opacity .3s, visibility .3s, transform .3s;
+  transition: opacity .3s, visibility .3s, transform .3s, -webkit-transform .3s;
+}
+
+.feedback__modals .modals__overlay .feedback__modal.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.feedback__modals .modals__overlay .feedback__modal .feedback__modal-video img {
+  height: 100%;
+  width: 500px;
+}
+
+.feedback__modals .modals__overlay .feedback__modal .feedback__modal-video video {
+  height: 100%;
+  width: 500px;
+}
+
+.feedback__modals .modals__overlay .feedback__modal .feedback__modal-content {
+  padding: 70px 0 0 50px;
+}
+
+.feedback__modals .modals__overlay .feedback__modal .feedback__modal-content .feedback__modal-name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #282A33;
+  margin-bottom: 20px;
+}
+
+.feedback__modals .modals__overlay .feedback__modal .feedback__modal-content .feedback__modal-message {
+  font-size: 14px;
+  line-height: 20px;
+  color: #282A33;
+  max-width: 450px;
+}
+
+.feedback__modals .modals__overlay .feedback__modal .feedback__modal-close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 26px;
+  right: 26px;
 }
 
 .blog {
@@ -2934,7 +3033,7 @@ table td {
   .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content {
     width: 400px;
     min-height: 320px;
-    padding: 20px 10px 20px 145px;
+    padding: 25px 16px 25px 170px;
   }
 
   .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content:nth-child(2n+1) {
@@ -2942,7 +3041,7 @@ table td {
   }
 
   .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content .feedback__article-img {
-    min-width: 230px;
+    min-width: 200px;
     height: 320px;
   }
 
@@ -3076,6 +3175,22 @@ table td {
   .feedback-section .feedback-content .feedback-content__grid .feedback-content__article {
     margin: 0 auto;
     margin-top: 30px;
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal {
+    height: 450px;
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal .feedback__modal-video img {
+    width: 300px;
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal .feedback__modal-video video {
+    width: 300px;
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal .feedback__modal-content {
+    padding: 70px 0 0 20px;
   }
 
   .blog .blog__grid .blog__grid-list .blog__grid-item .blog__grid-article .blog__grid-image {
@@ -3573,9 +3688,21 @@ table td {
   .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content .feedback__article-img {
     min-width: 220px;
     height: 320px;
-    -webkit-transform: translateX(55%);
-        -ms-transform: translateX(55%);
-            transform: translateX(55%);
+    -webkit-transform: translateX(45%);
+        -ms-transform: translateX(45%);
+            transform: translateX(45%);
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal {
+    height: 350px;
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal .feedback__modal-video img {
+    width: 200px;
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal .feedback__modal-video video {
+    width: 200px;
   }
 
   .blog {
@@ -3909,6 +4036,40 @@ table td {
 
   .feedback-section .feedback-content .feedback-content__grid .feedback-content__article .feedback__article-content .feedback__article-comment {
     max-width: 100%;
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal .feedback__modal-video img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 300px;
+    padding-top: 10px;
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal .feedback__modal-video video {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 300px;
+    padding-top: 10px;
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal .feedback__modal-content {
+    padding: 10px 0 0 0;
+  }
+
+  .feedback__modals .modals__overlay .feedback__modal .feedback__modal-close {
+    top: 15px;
+    right: 15px;
   }
 
   .blog .blog__grid .blog__grid-list .blog__grid-item .blog__grid-article {

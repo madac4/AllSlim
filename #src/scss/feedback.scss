@@ -25,6 +25,7 @@
             .feedback-content__article {
                 margin-top: 30px;
                 position: relative;
+                cursor: pointer;
                 @media (max-width: $md2+px) {
                     margin: 0 auto;
                     margin-top: 30px;
@@ -56,7 +57,7 @@
                     @media (max-width: $md1+px) {
                         width: 400px;
                         min-height: 320px;
-                        padding: 20px 10px 20px 145px;
+                        padding: 25px 16px 25px 170px;
                     }
                     @media (max-width: $md4+px) {
                         flex-direction: column;
@@ -83,13 +84,13 @@
                         left: -50%;
                         transform: translateX(45%);
                         @media (max-width: $md1+px) {
-                            min-width: 230px;
+                            min-width: 200px;
                             height: 320px;
                         }
                         @media (max-width: $md3+px) {
                             min-width: 220px;
                             height: 320px;
-                            transform: translateX(55%);
+                            transform: translateX(45%);
                         }
                         @media (max-width: $md4+px) {
                             position: relative;
@@ -109,6 +110,126 @@
                             max-width: 100%;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+.feedback__modals {
+    .modals__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background-color: rgba(35, 36, 42, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s, visibility .3s, transform .3s;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .feedback__modal {
+            background-color: #FFFFFF;
+            display: flex;
+            width: 100%;
+            height: 660px;
+            position: relative;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0);
+            transition: opacity .3s, visibility .3s, transform .3s;
+            @media (max-width: $md2+px) {
+                height: 450px;
+            }
+            @media (max-width: $md3+px) {
+                height: 350px;
+            }
+            @media (max-width: $md4+px) {
+                height: 100%;
+                flex-direction: column;
+                padding: 20px;
+            }
+            &.active {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+            .feedback__modal-video {
+                img {
+                    height: 100%;
+                    width: 500px;
+                    @media (max-width: $md2+px) {
+                        width: 300px;
+                    }
+                    @media (max-width: $md3+px) {
+                        width: 200px;
+                    }
+                    @media (max-width: $md4+px) {
+                        display: block;
+                        margin: 0 auto;
+                        width: 90%;
+                        height: 300px;
+                        padding-top: 10px;
+                    }
+                }
+                video {
+                    height: 100%;
+                    width: 500px;
+                    @media (max-width: $md2+px) {
+                        width: 300px;
+                    }
+                    @media (max-width: $md3+px) {
+                        width: 200px;
+                    }
+                    @media (max-width: $md4+px) {
+                        display: block;
+                        margin: 0 auto;
+                        width: 80%;
+                        height: 300px;
+                        padding-top: 10px;
+                    }
+                }
+            }
+            .feedback__modal-content {
+                padding: 70px 0 0 50px;
+                @media (max-width: $md2+px) {
+                    padding: 70px 0 0 20px;
+                }
+                @media (max-width: $md4+px) {
+                    padding: 10px 0 0 0;
+                }
+                .feedback__modal-name {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-transform: uppercase;
+                    color: $dark_color;
+                    margin-bottom: 20px;
+                }
+                .feedback__modal-message {
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: $dark_color;
+                    max-width: 450px;
+                }
+            }
+            .feedback__modal-close {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                position: absolute;
+                top: 26px;
+                right: 26px;
+                @media (max-width: $md4+px) {
+                    top: 15px;
+                    right: 15px;
                 }
             }
         }

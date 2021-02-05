@@ -1,9 +1,9 @@
 // Burger Menu
 const header = document.querySelector('.header');
+const body = document.querySelector('body');
 if (header != undefined) {
     const burger = document.querySelector('.burger_menu');
     const navMenu = document.querySelector('.header__nav');
-    const body = document.querySelector('body');
 
     burger.addEventListener('click', () => {
         burger.classList.toggle('active');
@@ -171,6 +171,11 @@ if (recentSlider != undefined) {
 // Recent Slider
 
 // Cart
+// RANDOM ID TO PRODUCT
+const randomId = () => {
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+};
+// RANDOM ID TO PRODUCT
 if (header != undefined) {
     const addToCart = document.querySelectorAll('.add_to_cart');
     const cartProductList = document.querySelector('.cart-content__list');
@@ -180,18 +185,7 @@ if (header != undefined) {
     const cartImg = document.querySelector('.cart__img');
     let price = 0;
 
-    document.addEventListener('scroll', () => {
-        let topOffset = window.scrollY;
-        if (topOffset > 150) {
-            cart.classList.remove('active');
-        }
-    });
 
-    // RANDOM ID TO PRODUCT
-    const randomId = () => {
-        return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-    };
-    // RANDOM ID TO PRODUCT
 
     // Str to Int(pentru calcul)
     const priceWithoutSpaces = (str) => {
@@ -240,6 +234,7 @@ if (header != undefined) {
             cart.classList.toggle('active')
         }
     });
+
     // DELETE PRODUCT
     const deleteProducts = (productParent) => {
         let id = productParent.querySelector('.cart-product').dataset.id;
@@ -326,57 +321,125 @@ if (map != undefined) {
 
 
 
-const steps = document.querySelectorAll('.step__point');
-const btnNext = document.querySelectorAll('.prodcut__checkout-submit');
-const btnBack = document.querySelector('.product__checkout-submit--back');
-let allContent = document.querySelectorAll('.cart-content__section');
-let allTitles = document.querySelectorAll('.cart-content__title');
+// const steps = document.querySelectorAll('.step__point');
+// const btnNext = document.querySelectorAll('.prodcut__checkout-submit');
+// const btnBack = document.querySelector('.product__checkout-submit--back');
+// let allContent = document.querySelectorAll('.cart-content__section');
+// let allTitles = document.querySelectorAll('.cart-content__title');
 
-let activeStep = 1;
+// let activeStep = 1;
 
-window.addEventListener("DOMContentLoaded", () => {
-    if (steps[0].getAttribute('data-number') === allContent[1].getAttribute('data-number')) {
-        allContent[0].style.display = "block";
-    } else {
-        allContent[1].style.display = "none";
-        allContent[2].style.display = "none";
+// window.addEventListener("DOMContentLoaded", () => {
+//     if (steps[0].getAttribute('data-number') === allContent[1].getAttribute('data-number')) {
+//         allContent[0].style.display = "block";
+//     } else {
+//         allContent[1].style.display = "none";
+//         allContent[2].style.display = "none";
 
-    };
-    if (steps[0].getAttribute('data-number') === allTitles[1].getAttribute('data-number')) {
-        allTitles[0].style.display = "block";
-    } else {
-        allTitles[1].style.display = "none";
-        allTitles[2].style.display = "none";
+//     };
+//     if (steps[0].getAttribute('data-number') === allTitles[1].getAttribute('data-number')) {
+//         allTitles[0].style.display = "block";
+//     } else {
+//         allTitles[1].style.display = "none";
+//         allTitles[2].style.display = "none";
 
-    };
+//     };
+// });
+
+// for (let step of steps) {
+//     steps.forEach((e) => {
+//         e.addEventListener('click', () => {
+//             const active = document.querySelector(".active");
+//             if (active) {
+//                 active.classList.remove("active");
+//             }
+//             e.classList.add('active');
+//         })
+//     });
+
+//     step.addEventListener('click', () => {
+//         for (let content of allContent) {
+//             if (content.getAttribute('data-number') === step.getAttribute('data-number')) {
+//                 content.style.display = "block";
+//             } else {
+//                 content.style.display = "none";
+//             }
+
+//         }
+//         for (let title of allTitles) {
+//             if (title.getAttribute('data-number') === step.getAttribute('data-number')) {
+//                 title.style.display = "block";
+//             } else {
+//                 title.style.display = "none";
+//             }
+//         }
+//     });
+// };
+
+
+const feedbackArticle = document.querySelectorAll('.feedback-content__article');
+const modalOverlay = document.querySelector('.modals__overlay');
+const modalBlock = document.querySelector('.feedback__modals');
+
+function generateFeedback(img, name, message, id) {
+    return `
+        <div class="modals__overlay data-id=${id}">
+            <div class="container">
+                <div class="feedback__modal">
+                    <div class="feedback__modal-video">
+                        <img src="${img}" alt="">
+                        <!-- <video controls autoplay>
+                            <source src="https://www.instagram.com/p/CJdSNHiAUwI/" type="video/mp4">
+                        </video> -->
+                    </div>
+                    <div class="feedback__modal-content">
+                        <h4 class="feedback__modal-name">${name}</h4>
+                        <p class="feedback__modal-message">${message}</p>
+                    </div>
+
+                    <button class="feedback__modal-close">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1.05L10.95 0L6 4.95L1.05 0L0 1.05L4.95 6L0 10.95L1.05 12L6 7.05L10.95 12L12 10.95L7.05 6L12 1.05Z" fill="#6C6D71"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+feedbackArticle.forEach(el => {
+    el.setAttribute('data-id', randomId());
+    el.addEventListener('click', (e) => {
+        let self = e.currentTarget;
+        let id = self.dataset.id;
+        let img = self.querySelector('.feedback__article-img').getAttribute('src');
+        let name = self.querySelector('.feedback__article-username').textContent;
+        let message = self.querySelector('.feedback__article-comment').textContent;
+        modalBlock.insertAdjacentHTML('afterBegin', generateFeedback(img, name, message, id));
+        modalBlock.querySelector('.modals__overlay').classList.add('active');
+
+        setTimeout(() => { modalBlock.querySelector('.feedback__modal').classList.add('active'); }, 0);
+        body.classList.add('lock');
+        self.disabled = true;
+
+
+        const modalClose = document.querySelector('.feedback__modal-close');
+        const modalOverlay = document.querySelector('.modals__overlay');
+
+        modalClose.addEventListener('click', () => {
+            modalBlock.querySelector('.modals__overlay').classList.remove('active');
+            modalBlock.querySelector('.feedback__modal').classList.remove('active');
+            body.classList.remove('lock');
+
+        });
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target == modalOverlay) {
+                modalBlock.querySelector('.modals__overlay').classList.remove('active');
+                modalBlock.querySelector('.feedback__modal').classList.remove('active');
+                body.classList.remove('lock');
+
+            }
+        });
+    })
 });
-
-for (let step of steps) {
-    steps.forEach((e) => {
-        e.addEventListener('click', () => {
-            const active = document.querySelector(".active");
-            if (active) {
-                active.classList.remove("active");
-            }
-            e.classList.add('active');
-        })
-    });
-
-    step.addEventListener('click', () => {
-        for (let content of allContent) {
-            if (content.getAttribute('data-number') === step.getAttribute('data-number')) {
-                content.style.display = "block";
-            } else {
-                content.style.display = "none";
-            }
-
-        }
-        for (let title of allTitles) {
-            if (title.getAttribute('data-number') === step.getAttribute('data-number')) {
-                title.style.display = "block";
-            } else {
-                title.style.display = "none";
-            }
-        }
-    });
-};
