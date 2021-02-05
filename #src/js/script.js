@@ -4,7 +4,6 @@ const body = document.querySelector('body');
 if (header != undefined) {
     const burger = document.querySelector('.burger_menu');
     const navMenu = document.querySelector('.header__nav');
-
     burger.addEventListener('click', () => {
         burger.classList.toggle('active');
         navMenu.classList.toggle('active');
@@ -13,10 +12,10 @@ if (header != undefined) {
 }
 // Burger Menu
 
+
 // Scroll To Top
 const scrollToTop = document.querySelector('.scroll__top');
 if (scrollToTop != undefined) {
-
     window.addEventListener('scroll', () => {
         let scrollPos = window.scrollY;
         if (scrollPos > 500) {
@@ -35,6 +34,7 @@ if (scrollToTop != undefined) {
 }
 // Scroll To Top
 
+
 // Country Picker
 const choices = document.querySelector('.wrapper__form');
 if (choices != undefined) {
@@ -47,6 +47,7 @@ if (choices != undefined) {
     countryPicker();
 }
 // Country Picker
+
 
 //Cart Country Picker
 const cartChoices = document.querySelector('.cart-form');
@@ -63,6 +64,7 @@ if (cartChoices != undefined) {
     countryPicker();
 }
 //Cart Country Picker
+
 
 // Responsive Languages
 window.addEventListener('resize', () => {
@@ -94,6 +96,7 @@ window.addEventListener('resize', () => {
 });
 // Responsive Languages
 
+
 // Main Slider
 const mainSlide = document.querySelector('.swiper');
 if (mainSlide != undefined) {
@@ -113,12 +116,11 @@ if (mainSlide != undefined) {
 
     });
 };
-
 // Main Slider
+
 
 // Feedback Slider
 const feedbackSlide = document.querySelector('.feedback__swiper');
-
 if (feedbackSlide != undefined) {
     var swiper = new Swiper('.feedback__swiper', {
         centeredSlides: true,
@@ -140,9 +142,34 @@ if (feedbackSlide != undefined) {
 };
 // Feedback Slider
 
+
+// Feedback Slider
+const productPopupSlider = document.querySelector('.popup__content-swiper');
+if (productPopupSlider != undefined) {
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 20,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+
+    var galleryTop = new Swiper('.gallery-top', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-next',
+            prevEl: '.swiper-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs
+        }
+    });
+};
+// Feedback Slider
+
+
 // Recent Slider
 const recentSlider = document.querySelector('.recent-post__swiper');
-
 if (recentSlider != undefined) {
     var recentswiper = new Swiper('.recent-post__swiper', {
         spaceBetween: 30,
@@ -170,7 +197,9 @@ if (recentSlider != undefined) {
 }
 // Recent Slider
 
+
 // Cart
+
 // RANDOM ID TO PRODUCT
 const randomId = () => {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
@@ -184,8 +213,6 @@ if (header != undefined) {
     const fullPrice = document.querySelector('.cart-content__price');
     const cartImg = document.querySelector('.cart__img');
     let price = 0;
-
-
 
     // Str to Int(pentru calcul)
     const priceWithoutSpaces = (str) => {
@@ -226,7 +253,6 @@ if (header != undefined) {
         }
     };
 
-
     // SHOW QUANTITY
     cartImg.addEventListener('click', () => {
         let length = cartQuantity.textContent;
@@ -247,12 +273,8 @@ if (header != undefined) {
         printQuantity();
     };
     // DELETE PRODUCT
-
-
-
     const generateCartProduct = (img, title, price, id) => {
         return `
-    
         <li class="cart-content__item">
             <article class="cart-content__product cart-product" data-id="${id}">
                 <a href="#" class="cart-content__link">
@@ -269,7 +291,6 @@ if (header != undefined) {
                 </button>
             </article>
         </li>
-    
     `;
     }
 
@@ -300,85 +321,82 @@ if (header != undefined) {
 }
 // Cart
 
-const map = document.querySelector('#map');
 
+// MAP
+const map = document.querySelector('#map');
 if (map != undefined) {
     function initMap() {
-        // The location of Uluru
         const uluru = { lat: -25.344, lng: 131.036 };
-        // The map, centered at Uluru
         const map = new google.maps.Map(document.getElementById("map"), {
             zoom: 4,
             center: uluru,
         });
-        // The marker, positioned at Uluru
         const marker = new google.maps.Marker({
             position: uluru,
             map: map,
         });
     };
 };
+// MAP
+
+// CLICK TO STEP
+const steps = document.querySelectorAll('.step__point');
+if (steps[0] != undefined) {
+    let allContent = document.querySelectorAll('.cart-content__section');
+    let allTitles = document.querySelectorAll('.cart-content__title');
+    window.addEventListener("DOMContentLoaded", () => {
+        if (steps[0].getAttribute('data-number') === allContent[1].getAttribute('data-number')) {
+            allContent[0].style.display = "block";
+        } else {
+            allContent[1].style.display = "none";
+            allContent[2].style.display = "none";
+
+        };
+        if (steps[0].getAttribute('data-number') === allTitles[1].getAttribute('data-number')) {
+            allTitles[0].style.display = "block";
+        } else {
+            allTitles[1].style.display = "none";
+            allTitles[2].style.display = "none";
+
+        };
+    });
+
+    for (let step of steps) {
+        steps.forEach((e) => {
+            e.addEventListener('click', () => {
+                const active = document.querySelector(".active");
+                if (active) {
+                    active.classList.remove("active");
+                }
+                e.classList.add('active');
+            })
+        });
+
+        step.addEventListener('click', () => {
+            for (let content of allContent) {
+                if (content.getAttribute('data-number') === step.getAttribute('data-number')) {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+
+            }
+            for (let title of allTitles) {
+                if (title.getAttribute('data-number') === step.getAttribute('data-number')) {
+                    title.style.display = "block";
+                } else {
+                    title.style.display = "none";
+                }
+            }
+        });
+    };
+}
+// CLICK TO STEP
 
 
-
-// const steps = document.querySelectorAll('.step__point');
-// const btnNext = document.querySelectorAll('.prodcut__checkout-submit');
-// const btnBack = document.querySelector('.product__checkout-submit--back');
-// let allContent = document.querySelectorAll('.cart-content__section');
-// let allTitles = document.querySelectorAll('.cart-content__title');
-
-// let activeStep = 1;
-
-// window.addEventListener("DOMContentLoaded", () => {
-//     if (steps[0].getAttribute('data-number') === allContent[1].getAttribute('data-number')) {
-//         allContent[0].style.display = "block";
-//     } else {
-//         allContent[1].style.display = "none";
-//         allContent[2].style.display = "none";
-
-//     };
-//     if (steps[0].getAttribute('data-number') === allTitles[1].getAttribute('data-number')) {
-//         allTitles[0].style.display = "block";
-//     } else {
-//         allTitles[1].style.display = "none";
-//         allTitles[2].style.display = "none";
-
-//     };
-// });
-
-// for (let step of steps) {
-//     steps.forEach((e) => {
-//         e.addEventListener('click', () => {
-//             const active = document.querySelector(".active");
-//             if (active) {
-//                 active.classList.remove("active");
-//             }
-//             e.classList.add('active');
-//         })
-//     });
-
-//     step.addEventListener('click', () => {
-//         for (let content of allContent) {
-//             if (content.getAttribute('data-number') === step.getAttribute('data-number')) {
-//                 content.style.display = "block";
-//             } else {
-//                 content.style.display = "none";
-//             }
-
-//         }
-//         for (let title of allTitles) {
-//             if (title.getAttribute('data-number') === step.getAttribute('data-number')) {
-//                 title.style.display = "block";
-//             } else {
-//                 title.style.display = "none";
-//             }
-//         }
-//     });
-// };
-
-
+// FEEDBACK POPUP
 const feedbackArticle = document.querySelectorAll('.feedback-content__article');
-const modalOverlay = document.querySelector('.modals__overlay');
+const swiperFeedbacks = document.querySelectorAll('.feedback__swiper-slide');
 const modalBlock = document.querySelector('.feedback__modals');
 
 function generateFeedback(img, name, message, id) {
@@ -418,15 +436,41 @@ feedbackArticle.forEach(el => {
         let message = self.querySelector('.feedback__article-comment').textContent;
         modalBlock.insertAdjacentHTML('afterBegin', generateFeedback(img, name, message, id));
         modalBlock.querySelector('.modals__overlay').classList.add('active');
-
         setTimeout(() => { modalBlock.querySelector('.feedback__modal').classList.add('active'); }, 0);
         body.classList.add('lock');
-        self.disabled = true;
-
 
         const modalClose = document.querySelector('.feedback__modal-close');
         const modalOverlay = document.querySelector('.modals__overlay');
+        modalClose.addEventListener('click', () => {
+            modalBlock.querySelector('.modals__overlay').classList.remove('active');
+            modalBlock.querySelector('.feedback__modal').classList.remove('active');
+            body.classList.remove('lock');
+        });
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target == modalOverlay) {
+                modalBlock.querySelector('.modals__overlay').classList.remove('active');
+                modalBlock.querySelector('.feedback__modal').classList.remove('active');
+                body.classList.remove('lock');
+            }
+        });
+    })
+});
 
+swiperFeedbacks.forEach(el => {
+    el.setAttribute('data-id', randomId());
+    el.addEventListener('click', (e) => {
+        let self = e.currentTarget;
+        let id = self.dataset.id;
+        let img = self.querySelector('.feedback-slide__user').getAttribute('src');
+        let name = self.querySelector('.feedback-slide__username').textContent;
+        let message = self.querySelector('.feedback-slide__comment').textContent;
+        modalBlock.insertAdjacentHTML('afterBegin', generateFeedback(img, name, message, id));
+        modalBlock.querySelector('.modals__overlay').classList.add('active');
+        setTimeout(() => { modalBlock.querySelector('.feedback__modal').classList.add('active'); }, 0);
+        body.classList.add('lock');
+
+        const modalClose = document.querySelector('.feedback__modal-close');
+        const modalOverlay = document.querySelector('.modals__overlay');
         modalClose.addEventListener('click', () => {
             modalBlock.querySelector('.modals__overlay').classList.remove('active');
             modalBlock.querySelector('.feedback__modal').classList.remove('active');
@@ -443,3 +487,4 @@ feedbackArticle.forEach(el => {
         });
     })
 });
+// FEEDBACK POPUP
