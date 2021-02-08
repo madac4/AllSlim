@@ -6,10 +6,7 @@
     <title>Choose Country</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- STYLE -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/choices.js/3.0.4/styles/css/choices.min.css" integrity="sha512-x7ERT6DMhtdz/BdiPhbjGFIG6uzE5TRQZ3VbQFBllZAmwWvSiANFs1H4d92EN5fcv/JaNp0P3/lTdT8/5SX1GQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- STYLE -->
 </head>
 
 <body>
@@ -25,8 +22,8 @@
 
                 <form action="#" class="wrapper__form">
                     <label for="country" class="form-label">Your Country<span>*</span></label>
-                    <select name="country" id="country" class="form__countrypicker form-input" required>
-                        <option value="Moldova" class="choices__item">Moldova</option>
+                    <select name="country" id="country" data-validate-field="country" class="form__countrypicker form-input" required>
+                        <option value="" class="choices__item">Moldova</option>
                         <option value="Rusia" class="choices__item">Rusia</option>
                         <option value="Ukraina" class="choices__item">Ukraina</option>
                         <option value="Romanaia" class="choices__item">Romanaia</option>
@@ -44,10 +41,9 @@
 
 
 
-    <!-- SCRTIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/3.0.4/choices.min.js" integrity="sha512-9N5Sv1fzjEnf4wx08TbEyjgtd9hXBi4GdjmCfmc5sXqX5M4S4lfrrFXWZMkUCWi2Uo1LCnjZEFGh075qIbBL8w==" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-    <!-- SCRTIPTS -->
+    <script src="js/choices.min.js"></script>
+    <script src="js/just-validate.min.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>

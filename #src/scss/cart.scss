@@ -387,8 +387,10 @@
             height: 1px;
             background-color: #E5E8EE;
         }
-        .prodcut__checkout-submit {
+        .product__checkout-submit {
             margin-bottom: 25px;
+            width: 100%;
+            display: block;
             cursor: pointer;
         }
     }
@@ -607,4 +609,5 @@
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
+        margin-top: 20px;
     }

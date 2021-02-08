@@ -1,3 +1,7 @@
+@import url('swiper-bundle.min.css');
+@import url('alertify.min.css');
+@import url('simplebar.css');
+@import url('choices.min.css');
 @import 'mixin';
 @import 'fonts';
 @import 'normalize';
@@ -31,8 +35,8 @@
 
 .scroll__top {
     position: fixed;
-    z-index: 100;
-    bottom: 20px;
+    z-index: 9;
+    bottom: 70px;
     right: 20px;
     background-color: #6c6d71;
     padding: 10px;
@@ -173,6 +177,7 @@
     width: 350px;
     transition: box-shadow .3s;
     max-height: 460px;
+    cursor: pointer;
     &:hover {
         box-shadow: 0px 4px 40px rgba(13, 13, 15, 0.15);
     }
@@ -209,17 +214,6 @@
             background-color: #881D1E;
         }
     }
-    .product__link {
-        &::after {
-            content: '';
-            position: absolute;
-            display: block;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-        }
-    }
     .product__img {
         width: 255px;
         height: 255px;
@@ -234,6 +228,16 @@
         line-height: 30px;
         margin-bottom: 10px;
         color: $dark_color;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            cursor: pointer;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
     }
     .product__descr {
         font-size: 14px;
@@ -800,13 +804,20 @@
         .popup {
             background-color: #FFFFFF;
             width: 100%;
-            height: 660px;
+            min-height: 660px;
             position: relative;
             opacity: 0;
             visibility: hidden;
             transform: scale(0);
             transition: opacity .3s, visibility .3s, transform .3s;
             padding: 0px 35px 40px 35px;
+            @media (max-width: $md2+px) {
+                padding: 15px 30px;
+                max-height: 500px;
+            }
+            @media (max-width: $md4+px) {
+                padding: 15px;
+            }
             &.active {
                 opacity: 1;
                 visibility: visible;
@@ -815,25 +826,49 @@
             .popup__content {
                 display: flex;
                 position: relative;
+                @media (max-width: $md2+px) {
+                    flex-direction: column;
+                }
                 .popup__content-swiper {
                     position: relative;
+                    padding-right: 70px;
+                    @media (max-width: $md2+px) {
+                        padding-right: 0;
+                    }
                     .gallery-thumbs {
                         margin-top: 40px;
+                        @media (max-width: $md2+px) {
+                            margin-top: 20px;
+                        }
                         .swiper-slide {
                             max-width: 80px;
                             height: 80px;
                             border: 1px solid transparent;
+                            @media (max-width: $md4+px) {
+                                max-width: 55px;
+                                height: 55px;
+                            }
                             &.swiper-slide-thumb-active {
                                 border: 1px solid $accent_color;
                             }
                             img {
                                 width: 80px;
                                 height: 80px;
+                                @media (max-width: $md4+px) {
+                                    width: 55px;
+                                    height: 55px;
+                                }
                             }
                         }
                     }
                     .swiper-wrapper {
                         max-width: 500px;
+                        @media (max-width: $md1+px) {
+                            max-width: 400px;
+                        }
+                        @media (max-width: $md2+px) {
+                            max-width: 100%;
+                        }
                     }
                     .popul-swiper__slide {
                         overflow: hidden;
@@ -842,18 +877,31 @@
                             height: 500px;
                             display: block;
                             margin: 0 auto;
+                            @media (max-width: $md1+px) {
+                                width: 350px;
+                                height: 450px;
+                            }
+                            @media (max-width: $md2+px) {
+                                height: 350px;
+                            }
+                            @media (max-width: $md4+px) {
+                                max-width: 100%;
+                                height: 280px;
+                            }
                         }
                     }
                     .swiper-control {
                         .swiper-prev {
                             position: absolute;
                             top: 50%;
+                            transform: translateY(-50%);
                             left: 0;
                             z-index: 10;
                         }
                         .swiper-next {
                             position: absolute;
                             top: 50%;
+                            transform: translateY(-50%);
                             right: 0;
                             z-index: 10;
                         }
@@ -861,7 +909,10 @@
                 }
                 .popup__content-information {
                     padding-top: 50px;
-                    padding-left: 70px;
+                    position: relative;
+                    @media (max-width: $md2+px) {
+                        padding-top: 25px;
+                    }
                     .popup__content-name {
                         font-family: Playfair Display;
                         font-weight: bold;
@@ -871,8 +922,16 @@
                         text-transform: uppercase;
                         color: $dark_color;
                         margin-bottom: 30px;
+                        @media (max-width: $md4+px) {
+                            margin-bottom: 15px;
+                            font-size: 32px;
+                        }
                     }
                     .popup__content-list {
+                        margin-bottom: 100px;
+                        @media (max-width: $md4+px) {
+                            margin-bottom: 125px;
+                        }
                         .popup__content-item {
                             font-size: 14px;
                             line-height: 25px;
@@ -881,6 +940,13 @@
                             padding-left: 15px;
                             &:not(:last-child) {
                                 margin-bottom: 30px;
+                                @media (max-width: $md2+px) {
+                                    margin-bottom: 20px;
+                                }
+                                @media (max-width: $md4+px) {
+                                    font-size: 13px;
+                                    line-height: 22px;
+                                }
                             }
                             &::before {
                                 content: '';
@@ -896,36 +962,59 @@
                         }
                     }
                     .popup-information__bottom {
-                        display: block;
-                        margin-top: auto;
+                        position: absolute;
+                        width: 100%;
+                        bottom: 0;
+                        left: 0;
                         .popup-information__devider {
                             width: 100%;
                             height: 1px;
                             background-color: #E5E8EE;
                             margin-bottom: 40px;
-                            margin-top: 140px;
+                            @media (max-width: $md2+px) {
+                                margin-bottom: 20px;
+                            }
+                            @media (max-width: $md4+px) {
+                                margin-bottom: 10px;
+                            }
                         }
                         .popup-information__buy {
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
+                            @media (max-width: $md4+px) {
+                                flex-wrap: wrap;
+                            }
                             .popup-information__price {
                                 font-weight: bold;
                                 font-size: 24px;
                                 line-height: 29px;
                                 color: $dark_color;
+                                @media (max-width: $md4+px) {
+                                    font-size: 18px;
+                                    margin-bottom: 15px;
+                                }
                                 span {
                                     text-decoration-line: line-through;
                                     color: #6C6D71;
                                     margin-left: 15px;
+                                    @media (max-width: $md4+px) {
+                                        margin-left: 10px;
+                                    }
                                 }
                             }
                             .popup-add_to_cart {
                                 display: flex;
                                 align-items: center;
                                 margin: 0;
+                                @media (max-width: $md4+px) {
+                                    font-size: 14px;
+                                }
                                 span {
                                     margin-left: 15px;
+                                    @media (max-width: $md4+px) {
+                                        margin-left: 10px;
+                                    }
                                 }
                             }
                         }
@@ -936,9 +1025,10 @@
                 background-color: transparent;
                 border: none;
                 outline: none;
-                position: absolute;
+                position: fixed;
                 top: 26px;
                 right: 26px;
+                z-index: 11;
             }
         }
     }

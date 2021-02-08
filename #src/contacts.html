@@ -6,10 +6,7 @@
     <title>All Slim - Contacte</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- STYLE -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.0/simplebar.min.css" integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- STYLE -->
 </head>
 
 <body>
@@ -39,23 +36,23 @@
                         <span class="body-content__minititle section-minititle">Contact us</span>
                         <h3 class="body-content__title section-title">wanna ask something?</h3>
 
-                        <form action="#" class="body-content__form" data-simplebar>
+                        <form action="#" class="body-content__form" method="POST">
                             <div class="body-content__grid">
                                 <div class="body-content__field">
                                     <label for="name" class="body-content__label form-label">Nume<span>*</span></label>
-                                    <input type="text" id="name" class="body-content__input form-input" required>
+                                    <input type="text" id="name" data-validate-field="name" class="body-content__input form-input">
                                 </div>
                                 <div class="body-content__field">
                                     <label for="last_name" class="body-content__label form-label">Prenume<span>*</span></label>
-                                    <input type="text" id="last_name" class="body-content__input form-input" required>
+                                    <input type="text" id="last_name" data-validate-field="last_name" class="body-content__input form-input">
                                 </div>
                                 <div class="body-content__field">
                                     <label for="E-mail" class="body-content__label form-label">E-mail<span>*</span></label>
-                                    <input type="email" id="E-mail" class="body-content__input form-input" required>
+                                    <input type="email" id="E-mail" data-validate-field="email" class="body-content__input form-input">
                                 </div>
                                 <div class="body-content__field">
                                     <label for="phone" class="body-content__label form-label">Phone<span>*</span></label>
-                                    <input type="tel" id="phone" class="body-content__input form-input" required>
+                                    <input type="tel" id="phone" data-validate-field="tel" class="body-content__input form-input">
                                 </div>
                             </div>
 
@@ -92,7 +89,7 @@
                         <img src="img/contactAdress.png" alt="" class="contact-body__img">
 
                         <h4 class="contact-body__title">Phone Number</h4>
-                        <adress class="contact-body__text">2972 Westheimer Rd. Santa Ana, Illinois 85486 </adress>
+                        <p class="contact-body__text">2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
                     </article>
                 </div>
             </div>
@@ -103,11 +100,9 @@
 
     @@include('_footer.html')
 
-    <!-- SCRTIPTS -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGV0ZaHT3PLW1JCvlRfzytQoOaUVXk-ck&callback=initMap&libraries=&v=weekly" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.0/simplebar.min.js" integrity="sha512-AS9rZZDdb+y4W2lcmkNGwf4swm6607XJYpNST1mkNBUfBBka8btA6mgRmhoFQ9Umy8Nj/fg5444+SglLHbowuA==" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-    <!-- SCRTIPTS -->
+    <script src="js/just-validate.min.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>
